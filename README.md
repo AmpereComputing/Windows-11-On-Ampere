@@ -3,8 +3,6 @@ This repo contains scripts and documents to create Windows 11 ISO and install Wi
 # Create UUP Dump File for Windows 11
 Microsoft does not release Windows 11 ISO on a regular bases. Create and download a uud dump convertion file, say 25336.1010_arm64_en-us_professional_16de9bb8_convert.zip, from this [site](https://uupdump.net/known.php?q=windows+11+arm). 
 
-But this section has details on how to prepare UUP dump files for building Windows 11 ISO. 
-
 # Build Windows 11 ISO on Ampere Platform
 Copy download zip file to a Ampere system running Ubuntu and create the Windows 11 ISO with the following commands. 
 ```
