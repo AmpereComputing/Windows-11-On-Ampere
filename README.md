@@ -88,7 +88,8 @@ When creating the USB, disable TPM (default).
 Following the document[^4], boot the system from the USB created above and install Windows 11 as normal. Again, if no installation medial found after boot into installation UI, the USB need to be recreated with TPM removed. 
 
 ## References
-^1 https://www.adlinktech.com/Products/Computer_on_Modules/COM-HPC-Server-Carrier-and-Starter-Kit/Ampere_Altra_Developer_Platform
+## ^1 
+https://www.adlinktech.com/Products/Computer_on_Modules/COM-HPC-Server-Carrier-and-Starter-Kit/Ampere_Altra_Developer_Platform
 
 ^2 https://uupdump.net/known.php?q=windows+11+arm
 
