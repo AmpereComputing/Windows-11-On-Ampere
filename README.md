@@ -53,13 +53,13 @@ There are multiple sites can assist on building Windows 11 ISOs. UUP Dump[^2] si
 
 On one of additional client, browse to [https://uupdump.net/known.php?q=windows+11+arm](https://uupdump.net/known.php?q=windows+11+arm), and then follow the steps to create and download a UUP Dump file. 
 1. Select the base image on the following page. 
-!Select base image[images/uud-dump-p1.png]
+![Select base image](images/uud-dump-p1.png)
 2. Select the language and click `next`. 
-!Select language and click next[images/uud-dump-p2.png]
+![Select language and click next](images/uud-dump-p2.png)
 3. Select the edition and click `next`. 
-!Select edition and click next[images/uud-dump-p3.png]
+![Select edition and click next](images/uud-dump-p3.png)
 4. Select the `Download method` and `Conversion options` and download the zip file
-!Select the `Download method` and `Conversion options` and download the zip file[images/uud-dump-p4.png]
+![Select the `Download method` and `Conversion options` and download the zip file](images/uud-dump-p4.png)
 
 ### Build Windows 11 ISO on Ubuntu running on x64 or Ampere CPU
 
