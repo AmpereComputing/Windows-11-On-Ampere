@@ -95,4 +95,4 @@ https://www.adlinktech.com/Products/Computer_on_Modules/COM-HPC-Server-Carrier-a
 
 [^3] https://rufus.ie/de/
 
-[^4] https://www.ipi.wiki/pages/comhpc-docs?page=index.html
+[^4]: https://www.ipi.wiki/pages/comhpc-docs?page=index.html
