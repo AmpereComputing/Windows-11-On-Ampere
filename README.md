@@ -69,7 +69,7 @@ Export UUPDUMP_ZIP to the zip file downloaded without the `.zip` extension. For 
 ```
 cd
 UUPDUMP_ZIP=22621.1555_arm64_en-us_professional_77b56537_convert
-script uupdump-build-iso.sh
+script/uupdump-build-iso.sh
 ```
 
 ### Create Bootable USB for Windows 11 with Rufus
@@ -85,7 +85,9 @@ When creating the USB, disable TPM (default).
 
 ### Install Windows on Ampere Workstation
 
-Following the document[^4], boot the system from the USB created above and install Windows 11 as normal. Again, if no installation medial found after boot into installation UI, the USB need to be recreated with TPM removed. 
+Following the document[^4], boot the system from the USB created above and install Windows 11 as normal. 
+
+Again, if no installation medial found after boot into installation UI, the USB need to be recreated with TPM removed. 
 
 ## References
 [^1]: https://www.adlinktech.com/Products/Computer_on_Modules/COM-HPC-Server-Carrier-and-Starter-Kit/Ampere_Altra_Developer_Platform
