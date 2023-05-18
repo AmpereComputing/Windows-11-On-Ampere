@@ -34,7 +34,7 @@ As of the time of this preparing this documents, there are no updated Windows 11
 
 ### Hardware
 * An Ampere CPU based workstation to be installed Windows 11
-  * AADP[<sup>^1</sup>](#^1)
+  * AADP[^1]
 * An additional client for (1) downloading UUP dump file and (2) creating bootable USB running
   * Windows 11 on ARM, or 
   * Windows 11 on x64.
@@ -88,11 +88,10 @@ When creating the USB, disable TPM (default).
 Following the document[^4], boot the system from the USB created above and install Windows 11 as normal. Again, if no installation medial found after boot into installation UI, the USB need to be recreated with TPM removed. 
 
 ## References
-## ^1 
-https://www.adlinktech.com/Products/Computer_on_Modules/COM-HPC-Server-Carrier-and-Starter-Kit/Ampere_Altra_Developer_Platform
+[^1]: https://www.adlinktech.com/Products/Computer_on_Modules/COM-HPC-Server-Carrier-and-Starter-Kit/Ampere_Altra_Developer_Platform
 
-^2 https://uupdump.net/known.php?q=windows+11+arm
+[^2]: https://uupdump.net/known.php?q=windows+11+arm
 
-[^3] https://rufus.ie/de/
+[^3]: https://rufus.ie/de/
 
 [^4]: https://www.ipi.wiki/pages/comhpc-docs?page=index.html
