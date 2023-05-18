@@ -4,7 +4,27 @@
 
 ## Summary
 
-This repo contains scripts and documents to create Windows 11 ISO and install Windows 11 on Ampere CPU based workstation.
+This repo contains scripts and documents to assit in the installation of Windows on Ampere Platforms.
+
+## Table of Contents
+* [Introduction](#introduction)
+* [Requirements](#requirements)
+  * [Hardware](#hardware)
+  * [Operating System](#operating-system)
+* [Create UUP Dump File for Windows 11](#create-uup-dump-file-for-windows-11)
+* [Building Windows 11 ISO on Ampere Platform](#build-windows-11-iso-on-ampere-platform)
+* [Create Bootable USB for Windows 11 with Rufus](create-bootable-usb-for-windows-11-with-rufus)
+* [Install Windows on Ampere Workstation](install-windows-on-ampere-workstation)
+* [References](#references)
+
+## Requirements
+
+### Hardware
+tbd
+
+### Operating System
+1. Create Windows 11 Workstation ISO
+2. Install Windows 11 on Ampere CPU based workstation.
 
 ## Create UUP Dump File for Windows 11
 
