@@ -34,7 +34,7 @@ As of the time of this preparing this documents, there are no updated Windows 11
 
 ### Hardware
 * An Ampere CPU based workstation to be installed Windows 11
-  * AADP[^1](#^1)
+  * AADP<sup>[^1]</sup>(#^1)
 * An additional client for (1) downloading UUP dump file and (2) creating bootable USB running
   * Windows 11 on ARM, or 
   * Windows 11 on x64.
