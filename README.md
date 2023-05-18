@@ -76,7 +76,7 @@ script/uupdump-build-iso.sh
 As the ISO has an secure boot option, this need to be removed. Currently there is only one tool, rufus[^3], has this feature to remove the secure boot. 
 
 **Note**: Bootable USB created with `dd` command can boot into installation UI, but not able to find any installation media. 
-If there is an Ampere or other Arm based client running Windows for Arm, downlonad the Arm version, say [rufus-4.0_arm64.exe](https://github.com/pbatard/rufus/releases/download/v4.0/rufus-4.0_arm64.exe). Otherwise, download x86 or x64 version for non-arm based clients. 
+If there is an Ampere or other Arm based client running Windows for Arm, downlonad the Arm version, saying [rufus-4.0_arm64.exe](https://github.com/pbatard/rufus/releases/download/v4.0/rufus-4.0_arm64.exe). Otherwise, download x86 or x64 version for non-arm based clients. 
 
 When creating the USB, disable TPM (default). 
 1. Click the Select button next to Disk or ISO image > Browse to and select the downloaded Windows 11 iso file
