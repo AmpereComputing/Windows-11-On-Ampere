@@ -4,20 +4,22 @@
 
 ## Summary
 
-This repo contains scripts and documents to assit in the installation of Windows on Ampere Platforms.
+This repo contains scripts and documents to assit in the installation of Windows on Ampere Platforms. It also contain applications that currently supported on this platform and how to develop applications natively on Ampere for ARM64. 
 
 ## Table of Contents
 * [Introduction](#introduction)
 * [Requirements](#requirements)
   * [Hardware](#hardware)
   * [Operating System](#operating-system)
+* [Hardware](#hardware-environment) 
+  * [Monitors connected to builtin VGA](#monitors-connected-to-builtin-vga)
 * [Install Windows 11 via ISO](#install-windows-via-iso)
   * [Create UUP Dump File for Windows 11](#create-uup-dump-file-for-windows-11)
   * [Building Windows 11 ISO on Ampere Platform](#build-windows-11-iso-on-ampere-platform)
   * [Create Bootable USB for Windows 11 with Rufus](create-bootable-usb-for-windows-11-with-rufus)
   * [Install Windows on Ampere Workstation](install-windows-on-ampere-workstation)
-* TODO Applications supported
-* TODO Application Development
+* [Applications](application)
+* [Application Development](applictation-development)
 * [References](#references)
 
 ## Introduction
@@ -27,9 +29,6 @@ On Ampere CPU based Arm workstations, on the other hand, there is a dedicated Ar
 
 As of the time of this preparing this documents, there are no updated Windows 11 ISO available on Windows 11 preview program. But there are other approaches to create Windows 11 installation ISO, which can be used to install Windows 11 on Ampere CPU based workstation normally. 
 
-[TODO] Applications supported
-
-[TODO] Applications development on Ampere workstation
 ## Requirements
 
 ### Hardware
@@ -42,11 +41,19 @@ As of the time of this preparing this documents, there are no updated Windows 11
   * Ampere CPU based client, or 
   * WSL running on Windows x64.
 
+### Software 
+1. UUP Dump
+1. Rufus
+1. Windows 11 ARM or X64
+1. Ubuntu Arm64/AMD64 on Ampere or x64
+
+## Hardware Environment
+AADP A1 has bug on grub and **A2** version is recommended.
+
+### Monitors connected to builtin VGA
+One monitor can connect to builtin VGA output is required.
 
 ## Install Windows 11 via ISO
-
-### Operating System
-1. Windows 11
 
 ### Create UUP Dump File for Windows 11
 There are multiple sites can assist on building Windows 11 ISOs. UUP Dump[^2] site is one of them, and document here.
@@ -89,6 +96,13 @@ Following the document[^4], boot the system from the USB created above and insta
 
 Again, if no installation medial found after boot into installation UI, the USB need to be recreated with TPM removed. 
 
+### Update VGA Driver 
+Download the latest VGA driver and install it. With the latest VGA driver, Windows 11 can support 1920x1080 monitors. 
+
+## Applications
+WIP
+## Applications Development
+WIP
 ## References
 [^1]: https://www.adlinktech.com/Products/Computer_on_Modules/COM-HPC-Server-Carrier-and-Starter-Kit/Ampere_Altra_Developer_Platform
 
