@@ -94,7 +94,7 @@ When creating the USB, disable TPM (default).
 
 Following the document[^4], boot the system from the USB created above and install Windows 11 as normal. 
 
-Again, if no installation medial found after boot into installation UI, the USB need to be recreated with TPM removed. 
+Again, if no installation media found after boot into installation UI, the USB need to be recreated with TPM removed. 
 
 ### Update VGA Driver 
 Download the latest VGA driver and install it. With the latest VGA driver, Windows 11 can support 1920x1080 monitors. 
