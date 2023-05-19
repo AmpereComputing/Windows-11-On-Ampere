@@ -23,7 +23,7 @@ This repo contains scripts and documents to assit in the installation of Windows
 * [References](#references)
 
 ## Introduction
-Currently Arm based client devices like Microsoft Surface Pro 9, Lenovo ThinkPad X13s, etc., are all based on Arm SOC like Snapdragon. These devices are good for portal or mobile scenario like pads or laptops running low demanding applications. The SOCs include CPU and other components and are well supported by VHDX images, which is available on Micorsoft inside preview program. 
+Currently Arm based client devices like Microsoft Surface Pro 9, Lenovo ThinkPad X13s, etc., are all based on Arm SOC like Snapdragon. These devices are good for portable or mobile scenario like pads or laptops running low demanding applications. The SOCs include CPU and other components and are well supported by VHDX images, which is available on Micorsoft inside preview program. 
 
 On Ampere CPU based Arm workstations, on the other hand, there is a dedicated Arm based CPU without other components. Installation of these system should follow normal ISO approaches used on installing Windows 11 on PCs, although VHDX could work too with extra driver components not needed. 
 
