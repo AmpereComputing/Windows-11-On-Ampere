@@ -4,7 +4,7 @@
 
 ## Summary
 
-This repo contains scripts and documents to assit in the installation of Windows on Ampere Platforms. It also contain applications that currently supported on this platform and how to develop applications natively on Ampere for ARM64. 
+This repo contains scripts and documents to assist in the installation of Windows on Ampere Platforms. It also contain applications that currently supported on this platform and how to develop applications natively on Ampere for ARM64. 
 
 ## Table of Contents
 * [Introduction](#introduction)
@@ -23,7 +23,7 @@ This repo contains scripts and documents to assit in the installation of Windows
 * [References](#references)
 
 ## Introduction
-Currently Arm based client devices like Microsoft Surface Pro 9, Lenovo ThinkPad X13s, etc., are all based on Arm SOC like Snapdragon. These devices are good for portable or mobile scenario like pads or laptops running low demanding applications. The SOCs include CPU and other components and are well supported by VHDX images, which is available on Micorsoft inside preview program. 
+Currently Arm based client devices like Microsoft Surface Pro 9, Lenovo ThinkPad X13s, etc., are all based on Arm SOC like Snapdragon. These devices are good for portable or mobile scenario like pads or laptops running low demanding applications. The SOCs include CPU and other components and are well supported by VHDX images, which is available on Microsoft inside preview program. 
 
 On Ampere CPU based Arm workstations, on the other hand, there is a dedicated Arm based CPU without other components. Installation of these system should follow normal ISO approaches used on installing Windows 11 on PCs, although VHDX could work too with extra driver components not needed. 
 
@@ -83,7 +83,7 @@ script/uupdump-build-iso.sh
 As the ISO has an secure boot option, this need to be removed. Currently there is only one tool, rufus[^3], has this feature to remove the secure boot. 
 
 **Note**: Bootable USB created with `dd` command can boot into installation UI, but not able to find any installation media. 
-If there is an Ampere or other Arm based client running Windows for Arm, downlonad the Arm version, saying [rufus-4.0_arm64.exe](https://github.com/pbatard/rufus/releases/download/v4.0/rufus-4.0_arm64.exe). Otherwise, download x86 or x64 version for non-arm based clients. 
+If there is an Ampere or other Arm based client running Windows for Arm, download the Arm version, saying [rufus-4.0_arm64.exe](https://github.com/pbatard/rufus/releases/download/v4.0/rufus-4.0_arm64.exe). Otherwise, download x86 or x64 version for non-arm based clients. 
 
 When creating the USB, disable TPM (default). 
 1. Click the Select button next to Disk or ISO image > Browse to and select the downloaded Windows 11 iso file
