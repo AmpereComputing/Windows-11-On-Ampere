@@ -88,7 +88,7 @@ If there is an Ampere or other Arm based client running Windows for Arm, downloa
 When creating the USB, disable TPM (default). 
 
 1. Click the Select button next to Disk or ISO image > Browse to and select the downloaded Windows 11 iso file
-![D](images/rufus-devices.png)
+![D](images/rufus-device.png)
 1. Check all check boxes, including `Remove requirement for 4GB+RAM, Secure Boot and TPM2.0` and `Remove required for an online Microsoft account` on `Customize Windows Installation` dialog box. 
 ![D](images/rufus-tpm.png)
 
