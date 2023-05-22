@@ -86,9 +86,11 @@ As the ISO has an secure boot option, this need to be removed. Currently there i
 If there is an Ampere or other Arm based client running Windows for Arm, download the Arm version, saying [rufus-4.0_arm64.exe](https://github.com/pbatard/rufus/releases/download/v4.0/rufus-4.0_arm64.exe). Otherwise, download x86 or x64 version for non-arm based clients. 
 
 When creating the USB, disable TPM (default). 
+
 1. Click the Select button next to Disk or ISO image > Browse to and select the downloaded Windows 11 iso file
-1. Select Extended Windows 11 Installation (no TPM / no Secure Boot) from the Image option dropdown
-1. Select MBR from the Partition scheme dropdown
+![D](images/rufus-devices.png)
+1. Check all check boxes, including `Remove requirement for 4GB+RAM, Secure Boot and TPM2.0` and `Remove required for an online Microsoft account` on `Customize Windows Installation` dialog box. 
+![D](images/rufus-tpm.png)
 
 ### Install Windows on Ampere Workstation
 
