@@ -18,7 +18,7 @@ This repo contains scripts and documents to assist in the installation of Window
   * [Building Windows 11 ISO on Ampere Platform](#build-windows-11-iso-on-ampere-platform)
   * [Create Bootable USB for Windows 11 with Rufus](create-bootable-usb-for-windows-11-with-rufus)
   * [Install Windows on Ampere Workstation](install-windows-on-ampere-workstation)
-* [Applications](application)
+* [Applications](applications)
 * [Application Development](applictation-development)
 * [References](#references)
 
@@ -102,9 +102,40 @@ Again, if no installation media found after boot into installation UI, the USB n
 Download the latest VGA driver and install it. With the latest VGA driver, Windows 11 can support 1920x1080 monitors. 
 
 ## Applications
-WIP
+### SSH Server on Windows 11
+SSH server can be installed on Windows 11 and enable remote access[^7]. 
+
+Open PowerShell terminal with Administrator and run the following commands.
+```
+> Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
+
+Name  : OpenSSH.Client~~~~0.0.1.0
+State : Installed
+
+Name  : OpenSSH.Server~~~~0.0.1.0
+State : NotPresent
+
+> Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+> Start-Service sshd
+> Get-Service sshd
+> Set-Service -Name sshd -StartupType 'Automatic'
+```
+
+After that, the port 22 need to be opened from firewall settings. 
+
+### WSL
+Not supported yet. 
+```
+PS> wsl --install
+...
+Error
+```
+
 ## Applications Development
-WIP
+WIP[^5]
+
+PCIDRV[^6]
+
 ## References
 [^1]: https://www.adlinktech.com/Products/Computer_on_Modules/COM-HPC-Server-Carrier-and-Starter-Kit/Ampere_Altra_Developer_Platform
 
@@ -113,3 +144,11 @@ WIP
 [^3]: https://rufus.ie/de/
 
 [^4]: https://www.ipi.wiki/pages/comhpc-docs?page=index.html
+
+[^5]: https://learn.microsoft.com/en-us/windows/arm/dev-kit/
+[^6]: https://learn.microsoft.com/en-us/samples/microsoft/windows-driver-samples/pcidrv---wdf-driver-for-pci-device/
+[^9]: Cmake for windows arm64
+[^10]: Python 3.11 for Windows ARM
+TortoiseSVN
+Git
+[^7]: https://www.hanselman.com/blog/how-to-ssh-into-a-windows-10-machine-from-linux-or-windows-or-anywhere
