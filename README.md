@@ -16,10 +16,10 @@ This repo contains scripts and documents to assist in the installation of Window
 * [Install Windows 11 via ISO](#install-windows-via-iso)
   * [Create UUP Dump File for Windows 11](#create-uup-dump-file-for-windows-11)
   * [Building Windows 11 ISO on Ampere Platform](#build-windows-11-iso-on-ampere-platform)
-  * [Create Bootable USB for Windows 11 with Rufus](create-bootable-usb-for-windows-11-with-rufus)
-  * [Install Windows on Ampere Workstation](install-windows-on-ampere-workstation)
-* [Applications](applications)
-* [Application Development](applictation-development)
+  * [Create Bootable USB for Windows 11 with Rufus](#create-bootable-usb-for-windows-11-with-rufus)
+  * [Install Windows on Ampere Workstation](#install-windows-on-ampere-workstation)
+* [Applications](#applications)
+* [Application Development](#applictation-development)
 * [References](#references)
 
 ## Introduction
