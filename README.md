@@ -18,6 +18,7 @@ This repo contains scripts and documents to assist in the installation of Window
   * [Building Windows 11 ISO on Ampere Platform](#build-windows-11-iso-on-ampere-platform)
   * [Create Bootable USB for Windows 11 with Rufus](#create-bootable-usb-for-windows-11-with-rufus)
   * [Install Windows on Ampere Workstation](#install-windows-on-ampere-workstation)
+* [Peripheral](#peripheral)
 * [Applications](#applications)
 * [Application Development](#applictation-development)
 * [References](#references)
@@ -101,11 +102,16 @@ Again, if no installation media found after boot into installation UI, the USB n
 ### Update VGA Driver 
 Download the latest VGA driver and install it. With the latest VGA driver, Windows 11 can support 1920x1080 monitors. 
 
-## peripheral 
+## Peripheral
 ### NIC
 Currently the builtin NIC are not supported by Windows 11, but certain USB based NIC are found working well with Windows 11. 
 Here is the list of NICs tested. 
 
+| Brand              | Chip |Type| Tested Date | Working|
+| :---------------- | :------: | :------: | :----: |
+| Diamond       |   RealTek   |   USB   |May 23, 2023 | Yes|
+| Benfei       |   RealTek   | USB | May 25, 2023 | Yes|
+| Intel       |   Intel   | PCI | May 23, 2023 | No|
 
 ## Applications
 ### SSH Server on Windows 11
