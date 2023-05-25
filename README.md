@@ -101,6 +101,12 @@ Again, if no installation media found after boot into installation UI, the USB n
 ### Update VGA Driver 
 Download the latest VGA driver and install it. With the latest VGA driver, Windows 11 can support 1920x1080 monitors. 
 
+## peripheral 
+### NIC
+Currently the builtin NIC are not supported by Windows 11, but certain USB based NIC are found working well with Windows 11. 
+Here is the list of NICs tested. 
+
+
 ## Applications
 ### SSH Server on Windows 11
 SSH server can be installed on Windows 11 and enable remote access[^7]. 
@@ -132,6 +138,7 @@ Error
 ```
 
 ## Applications Development
+
 WIP[^5]
 
 PCIDRV[^6]
