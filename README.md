@@ -107,11 +107,11 @@ Download the latest VGA driver and install it. With the latest VGA driver, Windo
 Currently the builtin NIC are not supported by Windows 11, but certain USB based NIC are found working well with Windows 11. 
 Here is the list of NICs tested. 
 
-| Brand              | Chip |Type| Tested Date | Working|
+| Brand              | Chip | Type | Tested Date | Working |
 | :---------------- | :------: | :------: | :----: |
-| Diamond       |   RealTek   |   USB   |May 23, 2023 | Yes|
-| Benfei       |   RealTek   | USB | May 25, 2023 | Yes|
-| Intel       |   Intel   | PCI | May 23, 2023 | No|
+| Diamond       |   RealTek   |   USB   | May 23, 2023 | Yes |
+| Benfei       |   RealTek   | USB | May 25, 2023 | Yes |
+| Intel       |   Intel   | PCI | May 23, 2023 | No |
 
 ## Applications
 ### SSH Server on Windows 11
