@@ -108,7 +108,7 @@ Currently the builtin NIC are not supported by Windows 11, but certain USB based
 Here is the list of NICs tested. 
 
 | Brand              | Chip | Type | Tested Date | Working |
-| :---------------- | :------: | :------: | :----: |
+| :---------------- | :------: | :------: | :----: | :----: |
 | Diamond       |   RealTek   |   USB   | May 23, 2023 | Yes |
 | Benfei       |   RealTek   | USB | May 25, 2023 | Yes |
 | Intel       |   Intel   | PCI | May 23, 2023 | No |
