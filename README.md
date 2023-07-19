@@ -30,6 +30,7 @@ On Ampere CPU based Arm workstations, on the other hand, there is a dedicated Ar
 
 As of the time of this preparing this documents, there are no updated Windows 11 ISO available on Windows 11 preview program. But there are other approaches to create Windows 11 installation ISO, which can be used to install Windows 11 on Ampere CPU based workstation normally. 
 
+Note: This is part of Ampere's [Arm Native Solutions](https://amperecomputing.com/solutions/arm-native) including cloud gaming, cloud phone, [Jetson 11 on Ampere](https://github.com/AmpereComputing/Jetson-on-Ampere), and [edge solutions](https://amperecomputing.com/home/edge). 
 ## Requirements
 
 ### Hardware
