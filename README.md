@@ -150,7 +150,7 @@ WIP[^5]
 PCIDRV[^6]
 
 ## References
-[^1]: https://www.adlinktech.com/Products/Computer_on_Modules/COM-HPC-Server-Carrier-and-Starter-Kit/Ampere_Altra_Developer_Platform
+[^1]: https://www.ipi.wiki/products/ampere-altra-developer-platform
 
 [^2]: https://uupdump.net/known.php?q=windows+11+arm
 
