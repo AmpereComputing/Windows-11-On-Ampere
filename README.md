@@ -24,33 +24,30 @@ This repo contains scripts and documents to assist in the installation of Window
 * [References](#references)
 
 ## Introduction
-Currently Arm based client devices like Microsoft Surface Pro 9, Lenovo ThinkPad X13s, etc., are all based on Arm SOC like Snapdragon. These devices are good for portable or mobile scenario like pads or laptops running low demanding applications. The SOCs include CPU and other components and are well supported by VHDX images, which is available on Microsoft inside preview program. 
+Currently Arm based client devices like Microsoft Surface Pro 9, Lenovo ThinkPad X13s, etc., are all based on Arm SOC like Snapdragon. These devices are good for portable or mobile scenario like pads or laptops running low demanding applications. The SOCs include CPU and other components and are well supported by VHDX images, which is available on the Microsoft Insider preview program. 
 
-On Ampere CPU based Arm workstations, on the other hand, there is a dedicated Arm based CPU without other components. Installation of these system should follow normal ISO approaches used on installing Windows 11 on PCs, although VHDX could work too with extra driver components not needed. 
+On Ampere CPU based Arm workstations, on the other hand, there is a dedicated Arm based CPU without other components. Installation of these systems should follow normal ISO approaches used on installing Windows 11 on PCs, although VHDX could work too with extra driver components not needed.
 
-As of the time of this preparing this documents, there are no updated Windows 11 ISO available on Windows 11 preview program. But there are other approaches to create Windows 11 installation ISO, which can be used to install Windows 11 on Ampere CPU based workstation normally. 
+As of the time of this preparing this documents, there are no updated Windows 11 ISO available on Windows 11 preview program. But there are other approaches to create Windows 11 installation ISO, which can be used to install Windows 11 on Ampere CPU based workstations normally.
 
 Note: This is part of Ampere's [Arm Native Solutions](https://amperecomputing.com/solutions/arm-native) including cloud gaming, cloud phone, [Jetson 11 on Ampere](https://github.com/AmpereComputing/Jetson-on-Ampere), and [edge solutions](https://amperecomputing.com/home/edge). 
 ## Requirements
 
 ### Hardware
 * An Ampere CPU based workstation to be installed Windows 11
-  * AADP[^1]
-* An additional client for (1) downloading UUP dump file and (2) creating bootable USB running
+  * Ampere Altra Developer Platform[^1]
+  * Ampere Altra Dev Kit[^1]
+* An additional client for (1) downloading UUP dump file and (2) creating a bootable USB drive running
   * Windows 11 on ARM, or 
   * Windows 11 on x64.
-* An Ubuntu environment for building Windows ISO from UUP dump file, running on
-  * Ampere CPU based client, or 
-  * WSL running on Windows x64.
 
 ### Software 
 1. UUP Dump
-1. Rufus
-1. Windows 11 ARM or X64
-1. Ubuntu Arm64/AMD64 on Ampere or x64
+2. Rufus
+3. Windows 11 ARM or X64
 
 ## Hardware Environment
-AADP A1 has bug on grub and **A2** version is recommended.
+AADP revision A1 has bug related to GRUB and **A2** revision is recommended.
 
 ### Monitors connected to builtin VGA
 One monitor can connect to builtin VGA output is required.
@@ -58,55 +55,55 @@ One monitor can connect to builtin VGA output is required.
 ## Install Windows 11 via ISO
 
 ### Create UUP Dump File for Windows 11
-There are multiple sites can assist on building Windows 11 ISOs. UUP Dump[^2] site is one of them, and document here.
+There are multiple sites which can assist with building Windows 11 ISOs. UUP Dump[^2] site is one of them, and is documented here.
 
-On one of additional client, browse to [https://uupdump.net/known.php?q=windows+11+arm](https://uupdump.net/known.php?q=windows+11+arm), and then follow the steps to create and download a UUP Dump file. 
-1. Select the base image on the following page. 
+On one of the additional clients, browse to [https://uupdump.net/known.php?q=windows+11+arm](https://uupdump.net/known.php?q=windows+11+arm), and then follow the steps to create and download a UUP Dump file.
+1. Select the base image on the following page.
 ![Select base image](images/uud-dump-p1.png)
-2. Select the language and click `next`. 
+2. Select the language and click `next`.
 ![Select language and click next](images/uud-dump-p2.png)
-3. Select the edition and click `next`. 
+3. Select the edition and click `next`.
 ![Select edition and click next](images/uud-dump-p3.png)
-4. Select the `Download method` and `Conversion options` and download the zip file
+4. Select the `Download method` and `Conversion options` and download the zip file.
 ![Select the `Download method` and `Conversion options` and download the zip file](images/uud-dump-p4.png)
 
-### Build Windows 11 ISO on Ubuntu running on x64 or Ampere CPU
+### Build Windows 11 ISO on Windows running on x64 or ARM CPU
 
-Copy download zip file, saying `22621.1555_arm64_en-us_professional_77b56537_convert.zip`, to a folder, saying home folder. 
-Export UUPDUMP_ZIP to the zip file downloaded without the `.zip` extension. For example `UUPDUMP_ZIP=22621.1555_arm64_en-us_professional_77b56537_convert`. Clone this repo to home folder, and then run the following command to build Windows 11 ISO. 
+Download the zip file, e.g.
+22631.3085_arm64_en-us_professional_ebde6b33_convert.zip and save it to
+a folder such as the Desktop. Unzip it, then launch a Command Prompt and `cd`
+to the directory containing the files. Next, run:
 
 ```
-cd
-UUPDUMP_ZIP=22621.1555_arm64_en-us_professional_77b56537_convert
-script/uupdump-build-iso.sh
+uup_download_windows.cmd
 ```
 
 ### Create Bootable USB for Windows 11 with Rufus
-As the ISO has an secure boot option, this need to be removed. Currently there is only one tool, rufus[^3], has this feature to remove the secure boot. 
+As the ISO has a Secure Boot option, this need to be removed. Currently there is only one tool, rufus[^3], which has this feature to remove the Secure Boot.
 
 **Note**: Bootable USB created with `dd` command can boot into installation UI, but not able to find any installation media. 
-If there is an Ampere or other Arm based client running Windows for Arm, download the Arm version, saying [rufus-4.0_arm64.exe](https://github.com/pbatard/rufus/releases/download/v4.0/rufus-4.0_arm64.exe). Otherwise, download x86 or x64 version for non-arm based clients. 
+If there is an Ampere or other Arm based client running Windows for Arm, download the Arm version, saying [rufus-4.0_arm64.exe](https://github.com/pbatard/rufus/releases/download/v4.0/rufus-4.0_arm64.exe). Otherwise, download x86 or x64 version for non-arm based clients.
 
-When creating the USB, disable TPM (default). 
+When creating the USB, disable TPM (default).
 
-1. Click the Select button next to Disk or ISO image > Browse to and select the downloaded Windows 11 iso file
+1. Click the Select button next to Disk or ISO image > Browse to and select the generated Windows 11 ISO file.
 ![D](images/rufus-device.png)
-1. Check all check boxes, including `Remove requirement for 4GB+RAM, Secure Boot and TPM2.0` and `Remove required for an online Microsoft account` on `Customize Windows Installation` dialog box. 
+2. After clicking the Start button, a "Customize Windows Installation" dialog will appear. Check all check boxes, including `Remove requirement for 4GB+RAM, Secure Boot and TPM2.0` and `Remove required for an online Microsoft account`.
 ![D](images/rufus-tpm.png)
 
 ### Install Windows on Ampere Workstation
 
-Following the document[^4], boot the system from the USB created above and install Windows 11 as normal. 
+Following the document[^4], boot the system from the USB created above and install Windows 11 as normal.
 
-Again, if no installation media found after boot into installation UI, the USB need to be recreated with TPM removed. 
+Again, if no installation media found after boot into installation UI, the USB need to be recreated with TPM removed.
 
 ### Update VGA Driver 
-Download the latest VGA driver and install it. With the latest VGA driver, Windows 11 can support 1920x1080 monitors. 
+Download the latest VGA driver and install it. With the latest VGA driver, Windows 11 can support 1920x1080 monitors.
 
 ## Peripheral
 ### NIC
-Currently the builtin NIC are not supported by Windows 11, but certain USB based NIC are found working well with Windows 11. 
-Here is the list of NICs tested. 
+Currently the builtin NIC is not supported by Windows 11, but certain USB based NICs are found to be working well with Windows 11.
+Here is the list of NICs tested.
 
 | Brand              | Chip | Type | Tested Date | Working |
 | :---------------- | :------: | :------: | :----: | :----: |
@@ -116,7 +113,7 @@ Here is the list of NICs tested.
 
 ## Applications
 ### SSH Server on Windows 11
-SSH server can be installed on Windows 11 and enable remote access[^7]. 
+The SSH server can be installed on Windows 11 and enable remote access[^7].
 
 Open PowerShell terminal with Administrator and run the following commands.
 ```
@@ -134,10 +131,10 @@ State : NotPresent
 > Set-Service -Name sshd -StartupType 'Automatic'
 ```
 
-After that, the port 22 need to be opened from firewall settings. 
+After that, the port 22 need to be opened from firewall settings.
 
 ### WSL
-Not supported yet. 
+Not supported yet.
 ```
 PS> wsl --install
 ...
