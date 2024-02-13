@@ -70,9 +70,9 @@ On one of the additional clients, browse to [https://uupdump.net/known.php?q=win
 ### Build Windows 11 ISO on Windows running on x64 or ARM CPU
 
 Download the zip file, e.g.
-22631.3085_arm64_en-us_professional_ebde6b33_convert.zip and save it to
-a folder such as the Desktop. Unzip it, then launch a Command Prompt and `cd`
-to the directory containing the files. Next, run:
+22631.3085_arm64_en-us_professional_ebde6b33_convert.zip ("Windows 11, version
+23H2 (22631.3085) arm64") and save it to a folder such as the Desktop. Unzip it, then
+launch a Command Prompt and `cd` to the directory containing the files. Next, run:
 
 ```
 uup_download_windows.cmd
@@ -82,7 +82,7 @@ uup_download_windows.cmd
 As the ISO has a Secure Boot option, this need to be removed. Currently there is only one tool, rufus[^3], which has this feature to remove the Secure Boot.
 
 **Note**: Bootable USB created with `dd` command can boot into installation UI, but not able to find any installation media. 
-If there is an Ampere or other Arm based client running Windows for Arm, download the Arm version, saying [rufus-4.0_arm64.exe](https://github.com/pbatard/rufus/releases/download/v4.0/rufus-4.0_arm64.exe). Otherwise, download x86 or x64 version for non-arm based clients.
+If there is an Ampere or other Arm based client running Windows for Arm, download the Arm version, saying [rufus-4.4_arm64.exe](https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4_arm64.exe). Otherwise, download x86 or x64 version for non-arm based clients.
 
 When creating the USB, disable TPM (default).
 
@@ -134,11 +134,29 @@ State : NotPresent
 After that, the port 22 need to be opened from firewall settings.
 
 ### WSL
-Not supported yet.
 ```
-PS> wsl --install
-...
-Error
+C:\Users\My Name>wsl --list --online
+The following is a list of valid distributions that can be installed.
+The default distribution is denoted by '*'.
+Install using 'wsl --install -d <Distro>'.
+
+  NAME                   FRIENDLY NAME
+* Ubuntu                 Ubuntu
+  Debian                 Debian GNU/Linux
+  Ubuntu-18.04           Ubuntu 18.04 LTS
+  Ubuntu-20.04           Ubuntu 20.04 LTS
+  Ubuntu-22.04           Ubuntu 22.04 LTS
+  openSUSE-Tumbleweed    openSUSE Tumbleweed
+
+C:\Users\My Name>wsl --install
+The requested operation requires elevation.
+Installing: Virtual Machine Platform
+Virtual Machine Platform has been installed.
+Installing: Windows Subsystem for Linux
+Windows Subsystem for Linux has been installed.
+Installing: Ubuntu
+Ubuntu has been installed.
+The requested operation is successful. Changes will not be effective until the system is rebooted.
 ```
 
 ## Applications Development
@@ -152,7 +170,7 @@ PCIDRV[^6]
 
 [^2]: https://uupdump.net/known.php?q=windows+11+arm
 
-[^3]: https://rufus.ie/de/
+[^3]: https://rufus.ie/en/
 
 [^4]: https://www.ipi.wiki/pages/comhpc-docs?page=index.html
 
