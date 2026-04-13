@@ -92,7 +92,7 @@ Run the following commands, where 'sdx' is the drive device name and '#' represe
 If you don't have a TPM installed, you can remove the requirement for Secure Boot. Currently there is only one tool, rufus[^3], which has this feature to remove the Secure Boot.
 
 **Note**: Bootable USB drives created with `dd` can boot into installation UI, but aren't able to find any installation media. 
-If there is an Ampere or other Arm based client running Windows for Arm, download the 'arm64' version, e.g. [rufus-4.9_arm64.exe](https://github.com/pbatard/rufus/releases/download/v4.9/rufus-4.9_arm64.exe). Otherwise, download x86 or x64 version for non-arm based clients.
+If there is an Ampere or other Arm based client running Windows for Arm, download the 'arm64' version, e.g. [rufus-4.13_arm64.exe](https://github.com/pbatard/rufus/releases/download/v4.13/rufus-4.13_arm64.exe). Otherwise, download x86 or x64 version for non-arm based clients.
 
 When creating the USB drive, disable TPM (default).
 
